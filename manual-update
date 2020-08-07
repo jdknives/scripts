@@ -14,7 +14,7 @@ ARCHIVE_NAME="${BASE_NAME}.tar.gz"
 SKYWIRE_URL="https://github.com/nkryuchkov/skywire/releases/download/${VERSION}/${ARCHIVE_NAME}"
 BINARY_NAMES="skywire-visor"
 
-rm -f "./${ARCHIVE_NAME}"
+rm -rf "./${ARCHIVE_NAME}"
 wget -O "$ARCHIVE_NAME" "$SKYWIRE_URL"
 rm -rf "./${FOLDER_NAME}"
 
