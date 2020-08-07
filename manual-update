@@ -22,7 +22,7 @@ mkdir "./${FOLDER_NAME}"
 tar -xf "./${ARCHIVE_NAME}" -C "./${FOLDER_NAME}"
 
 rm -f "./${BINARY_NAME}"
-cp "./${FOLDER_NAME}/${BINARY_NAME}" "./${BINARY_NAME}"
+cp -r "./${FOLDER_NAME}/${BINARY_NAME}" "./${BINARY_NAME}"
 
 rm -rf "./${FOLDER_NAME}"
 rm -f "./${ARCHIVE_NAME}"
