@@ -7,6 +7,8 @@ These are some git related scripts to facilitate work for Skycoin/Skywire.
 
 The script checks the current directory and if it recognizes it as a Skywire-related repository, it adds and updates a number of well-known remotes. 
 
+You can add the script as an alias by adding the following commands to your `bashrc`. 
+
 It can be aliases and invoked with:
 
 ```
