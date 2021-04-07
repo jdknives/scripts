@@ -1,4 +1,4 @@
 ## Scripts
 
-Repo for collecting scripts. 
+Repo for collecting basic scripts potentially useful.
 
