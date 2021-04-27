@@ -1,5 +1,5 @@
 #!/bin/bash
 
-CW=$(date +%V)
+CALENDAR_WEEK=$(date +%V)
 
-typora ~/Schreibtisch/Arbeit/Skycoin/Work\ Reports/CW-$CW.md &
+typora ~/Schreibtisch/Arbeit/Skycoin/Work\ Reports/CW-$CALENDAR_WEEK.md &

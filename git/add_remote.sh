@@ -2,7 +2,7 @@
 
 # This script checks current directory and adds and updates the typical remotes needed for Skywire development if user invokes it from a Skywire directory.
 
-DIR=$(basename $(PWD))
+DIR=$(basename $(pwd))
 
 if [ $DIR = "dmsg" ]; then
   git remote add darkren https://github.com/Darkren/dmsg.git
