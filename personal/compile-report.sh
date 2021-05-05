@@ -1,3 +1,8 @@
+# This script takes all the work reports of the last weeks (roughly the last month)
+# concatenates them and converts them to a PDF named as `Work-Report-April` where April
+# is the name of the last month.
+# The conversion from markdown to PDF is done with `pandoc`. Pandoc usually expects `latex-base`
+# and latex-extra` to be installed for the PDF engine to work correctly.
 #!/bin/bash
 
 LANG=en_us_8859_1
