@@ -2,4 +2,4 @@
 
 CALENDAR_WEEK=$(date +%V)
 
-typora ~/Schreibtisch/Arbeit/Skycoin/Work\ Reports/CW-$CALENDAR_WEEK.md &
+typora ~/Desktop/Arbeit/Skycoin/Work\ Reports/CW-$CALENDAR_WEEK.md 2>/dev/null &
