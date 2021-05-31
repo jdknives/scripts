@@ -5,6 +5,7 @@
 
 current_dir=${PWD##*/}
 repo_pulls_url="https://github.com/skycoin/$current_dir/pulls"
+repo_closed_pulls_url="https://github.com/skycoin/$current_dir/pulls?q=is%3Apr+is%3Aclosed"
 
 IFS="
 "
@@ -16,6 +17,8 @@ fi
 
 devsArray=($(curl $repo_pulls_url | grep -Po '(?<=created\sby\s)[^"]*' ))
 
+devsArray=($(curl $repo_closed_pulls_url | grep -Po '(?<=opened\sby\s)[^"]*' ))
+
 devsArray=( `for i in ${devsArray[@]}; do echo $i; done | sort -u` )
 
 remoteArray=($(git remote))
@@ -26,5 +29,7 @@ do
     git remote add $i "https://github.com/$i/$current_dir.git"
     fi
 done
+
+
 
 git remote update
