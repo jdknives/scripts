@@ -1,11 +1,12 @@
 #!/bin/bash
-#This script checks if the current directory is a git repository.
-#If it is, it grabs all remotes of developers with open PR to the repo
-#and adds them as remotes. 
+#This script checks if the current directory is a git repository. 
+#If it is, the script will check recently opened and closed PRs 
+#and add the repositories of the PR authors as remotes to the local
+#git repository. The script currently assumes the local repositiory 
+#was cloned via http. SSH repositories are not supported. 
 
-current_dir=${PWD##*/}
-repo_pulls_url="https://github.com/skycoin/$current_dir/pulls"
-repo_closed_pulls_url="https://github.com/skycoin/$current_dir/pulls?q=is%3Apr+is%3Aclosed"
+repo_pulls_url=$(git config --get remote.origin.url)
+repo_closed_pulls_url="$repo_pulls_url/pulls?q=is%3Apr+is%3Aclosed"
 
 IFS="
 "
